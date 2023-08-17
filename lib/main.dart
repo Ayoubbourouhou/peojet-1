@@ -17,16 +17,11 @@ import 'features/stations_feature/repository/station_repository.dart';
 import 'features/stations_feature/services/location_service.dart';
 import 'features/stations_feature/services/stations_api_service.dart';
 import 'features/wallet_feature/services/wallet_serivce.dart';
-import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   setupLogger();
-
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
 
   runApp(const RepositoryHolder(
     child: StationsApp(),
